@@ -75,68 +75,9 @@ NSArray *notes;
         // NSLog(@"%@\n", notes[i]);
         NSLog(@"%@ : %@ \n",[notes[i] objectForKey:@"action"],[notes[i] objectForKey:@"amount"]);
         [_allCities addObject:[Province provinceWithHeader:@" " Footer:@" " Cities:@[[notes[i] objectForKey:@"action"],[notes[i] objectForKey:@"amount"]]]];
-         //Province *first  = [Province :@"第i" Footer:@"第i组说明" Cities:@[@"%@ : %@ \n",[notes[i] objectForKey:@"action"],[notes[i] objectForKey:@"amount"]]];
     }
     NSLog(@"%@",_allCities);
     _tableView.dataSource=self;
-    
-   /* NSURL *url = [NSURL URLWithString:@"https://t1.tempo.fan/ledger/493c6b4ca883ed33b693e6811d66b3feecdb4bdb/SEN:FJU:CMZ0-99QQ"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    [request setHTTPMethod:@"GET"];
-    // request.HTTPBody = [[NSString stringWithFormat:@"userName=%@&pwd=%@",@"cc",@"123456"] dataUsingEncoding:NSUTF8StringEncoding];
-    
-   
-
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if(connectionError==nil)
-        {
-                        // NSLog(@"chenggong");
-            NSString *string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-            //字符串转字典输出
-            NSDictionary *dic=[self dictionaryWithJsonString:string];
-            //NSObject *value = [dic objectForKey:@"userName"];
-            notes = [dic objectForKey:@"notes"];
-            //NSObject *amount = [dic objectForKey:]
-            NSLog(@"%@",string);
-            _allCities=[[NSMutableArray alloc] initWithCapacity:notes.count];           //判断账号和密码是否为空
-            for (int i = 0; i < notes.count; i++)
-            {
-               // NSLog(@"%@\n", notes[i]);
-                NSLog(@"%@ : %@ \n",[notes[i] objectForKey:@"action"],[notes[i] objectForKey:@"amount"]);
-                [_allCities addObject:[Province provinceWithHeader:@"第二条" Footer:@"第二组说明" Cities:@[@"2",@"22"]]];                //Province *first  = [Province provinceWithHeader:@"第i" Footer:@"第i组说明" Cities:@[@"%@ : %@ \n",[notes[i] objectForKey:@"action"],[notes[i] objectForKey:@"amount"]]];
-               
-            }
-            NSLog(@"%@",_allCities);            /*Province *second = [Province provinceWithHeader:@"第二条" Footer:@"第二组说明" Cities:@[@"2",@"22"]];
-            //初始化数据
-            _allCities=@[second];
-            _tableView.dataSource=self;*/
-            /*for (int i = 1; i <= notes.count; i++)
-            {
-                //if notes[i]
-                    Province *first  = [Province provinceWithHeader:@"第一条" Footer:@"第一组说明" Cities:@[,]];
-            }
-            
-            //封装了头部标题，尾部说明，填充数据的类
-            
-           
-            
-        }
-        else
-        {
-            NSLog(@"shibai");
-            NSLog(@"%@",connectionError);
-        }
-    }];
- */
-    /*Province *second2 = [Province provinceWithHeader:@"第二条" Footer:@"第二组说明" Cities:@[@"2",@"22"]];
-    Province *second = [Province provinceWithHeader:@"第二条" Footer:@"第二组说明" Cities:@[@"2",@"22"]];
-    Province *third  = [Province provinceWithHeader:@"第三条" Footer:@"第三组说明" Cities:@[@"3",@"33"]];
-    
-    //初始化数据
-    _allCities=@[second2,second,third];*/
-    
-    
-    
 }
 
 #pragma mark 一共有多少组

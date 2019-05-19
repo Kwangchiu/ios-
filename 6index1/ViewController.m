@@ -205,12 +205,6 @@ NSDictionary *dic;
             //判断账号和密码是否为空
             if (_account.text.length >0 &&_passwd.text.length >0) {
                 
-                /*NextViewController *next=[[NextViewController alloc]init];
-                 next.modalTransitionStyle=UIModalTransitionStylePartialCurl;
-                 [self presentViewController:next animated:YES completion:^{
-                 
-                 }];*/
-                
                 //2.判断用户名和密码是否正确
                 if ([string isEqual:@"{\"error\":\"Wrong user or password.\"}"]) {
                     NSLog(@"用户名或密码错误，登录失败");
